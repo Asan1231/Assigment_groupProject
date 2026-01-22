@@ -33,6 +33,9 @@ public class Main {
         printHand(dealer);
 
         System.out.println();
+        game.checkWinner();
+
+        System.out.println();
         System.out.println("OK. Next step: we will add points + menu (hit/stand).");
     }
     private static void printHand(Player p) {
