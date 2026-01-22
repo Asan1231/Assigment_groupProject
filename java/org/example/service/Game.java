@@ -50,6 +50,22 @@ public class Game {
         System.out.println(player);
         System.out.println(dealer);
     }
+    public void checkWinner() {
+        int playerScore = player.getScore();
+        int dealerScore = dealer.getScore();
+
+        if (dealerScore > 21) {
+            System.out.println("Dealer busts! You win!");
+        } else if (playerScore > 21) {
+            System.out.println("You bust! You lose!");
+        } else if (dealerScore > playerScore) {
+            System.out.println("You lose");
+        } else if (dealerScore < playerScore) {
+            System.out.println("You win!");
+        } else {
+            System.out.println("Push (draw)");
+        }
+    }
 
     public Player getPlayer() {
         return player;
